@@ -5,7 +5,8 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain
 
 
-os.environ["GROQ_API_KEY"] = "add_your_groq_api_key_here"  
+groq_api_key = os.getenv("GROQ_API_KEY")
+os.environ["GROQ_API_KEY"] = groq_api_key 
 
 
 model = ChatGroq(
